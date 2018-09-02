@@ -1,16 +1,12 @@
 import * as React from 'react';
 import './App.css';
 
-import Avatar from './components/Avatar';
-import Icon from './components/Icon';
+import Header from './components/Header';
 
 class App extends React.Component {
   public render() {
     return (
-      <div>
-        <Avatar />
-        <Icon />
-      </div>
+      <Header />
     );
   }
 }
