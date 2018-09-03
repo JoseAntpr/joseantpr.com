@@ -15,12 +15,13 @@ const BackgroundImage = styled.div`
     z-index: -1;
     height: 100%;
     width: 100%;
-    opacity: 0.7;
-    filter: blur(5px);
+    opacity: 0.9;
+    filter: blur(2px);
     background: linear-gradient(
-        145deg,
-        rgba(234, 21, 85, 0.4),
-        rgba(21, 152, 234, 0.4)
+        90deg,
+        rgba(28, 28, 28, 0.65),
+        rgba(122, 118, 118, 0.65),
+        rgba(26, 187, 156, 0.65)
       ), url(${bgImg});
     background-position: center;
     background-repeat: no-repeat;
@@ -28,27 +29,34 @@ const BackgroundImage = styled.div`
 `
 
 const InfoContainer = styled.div`
+    display: inline-block;
+    width: calc(100% - 15px - 10px);
+    height: calc(100% - 30px);
+    margin-left: 10px;
     padding: 15px;
+    border-left: 3px solid rgba(26, 187, 156, 0.65);
+    color: #f7f7f7;
 `
 
 const Header = () => (
     <StyledHeader>
         <BackgroundImage />
-        <Avatar />
-        <InfoContainer>
-            <h2>José Antonio Palacios Ramírez</h2>
-            <h3>Full Stack Developer</h3>
-            <div>
-                <span style={{marginRight: '5px'}}>
-                    <i className='fas fa-envelope' />
-                </span>
-                joseantpalaciosramirez@gmail.com
-            </div>
-            <Icon />
-            <Icon />
-            <Icon />
-        </InfoContainer>
-        
+        <div style={{marginLeft: '50px', width: 'calc(100% - 50px)', display: 'flex',flexWrap: 'wrap', alignItems: 'center'}}>
+            <Avatar />
+            <InfoContainer>
+                <h2>José Antonio Palacios Ramírez</h2>
+                <h3>Full Stack Developer</h3>
+                <div>
+                    <span style={{marginRight: '5px'}}>
+                        <i className='fas fa-envelope' />
+                    </span>
+                    joseantpalaciosramirez@gmail.com
+                </div>
+                <Icon />
+                <Icon />
+                <Icon />
+            </InfoContainer>
+        </div>
     </StyledHeader>
 );
 
