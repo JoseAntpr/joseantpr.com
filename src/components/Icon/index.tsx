@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from '../../utils/theme/themeStyledComponents';
+import  { styled }  from '../../utils/theme/themeStyledComponents';
 
 const linkUrl = 'https://www.linkedin.com/in/joseantpalacios/';
 const StyledIcon = styled.span`

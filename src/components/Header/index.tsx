@@ -1,6 +1,6 @@
 import * as React from 'react';
 import bgImg from '../../assets/img/bg-2.jpg';
-import styled from '../../utils/theme/themeStyledComponents';
+import { styled } from '../../utils/theme/themeStyledComponents';
 import Avatar from '../Avatar';
 import Icon from '../Icon';
 
@@ -28,20 +28,36 @@ const BackgroundImage = styled.div`
     background-size: cover;
 `
 
-const InfoContainer = styled.div`
-    display: inline-block;
-    width: calc(100% - 15px - 10px);
-    height: calc(100% - 30px);
-    margin-left: 10px;
-    padding: 15px;
-    border-left: 3px solid rgba(26, 187, 156, 0.65);
-    color: #f7f7f7;
+
+const Wrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    ${ p => p.theme.media.desktop`
+      margin-left: 50px;
+    `}
+    ${ p => p.theme.media.onlyMobile`
+        justify-content: center;
+    `}
 `
 
+const InfoContainer = styled.div`
+    display: inline-block;
+    height: calc(100% - 30px);
+    padding: 15px;
+    ${p => p.theme.media.desktop`
+        margin-left: 10px;
+        border-left: 3px solid rgba(26, 187, 156, 0.65);
+    `};
+    ${p => p.theme.media.onlyMobile`
+        width: 100%;
+        text-align: center;
+    `};
+    color: #f7f7f7;
+`
 const Header = () => (
     <StyledHeader>
         <BackgroundImage />
-        <div style={{marginLeft: '50px', width: 'calc(100% - 50px)', display: 'flex',flexWrap: 'wrap', alignItems: 'center'}}>
+        <Wrapper>
             <Avatar />
             <InfoContainer>
                 <h2>José Antonio Palacios Ramírez</h2>
@@ -56,7 +72,7 @@ const Header = () => (
                 <Icon />
                 <Icon />
             </InfoContainer>
-        </div>
+        </Wrapper>
     </StyledHeader>
 );
 
