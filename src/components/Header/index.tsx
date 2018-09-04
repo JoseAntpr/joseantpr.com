@@ -61,7 +61,7 @@ const Header = () => (
             <Avatar />
             <InfoContainer>
                 <h2 className="typing-text">José Antonio Palacios Ramírez</h2>
-                <h3 className="typing-text2">Full Stack Developer</h3>
+                    <h3 className="typing-text2">Full Stack Developer</h3>
                 <div>
                     <span style={{marginRight: '5px'}}>
                         <i className='fas fa-envelope' />
