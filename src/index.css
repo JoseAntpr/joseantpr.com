@@ -56,7 +56,7 @@ html, body {
   border-color:  rgba(26, 187, 156, 0.65);
   white-space: nowrap;
   overflow: hidden;
-  -webkit-animation: type 5s steps(40, end), blink-caret .5s step-end infinite alternate;
+  -webkit-animation: type 3s steps(40, end), blink-caret .5s step-end infinite alternate;
 }
 
 .typing-text2{
@@ -65,9 +65,9 @@ html, body {
   white-space: nowrap;
   overflow: hidden;
   opacity: 0;
-  -webkit-animation: type 5s steps(40, end);
-  -webkit-animation: type2 5s steps(40, end), blink-caret .5s step-end infinite alternate;
-  animation-delay: 5s;
+  -webkit-animation: type 3s steps(40, end);
+  -webkit-animation: type2 3s steps(40, end), blink-caret .5s step-end infinite alternate;
+  animation-delay: 3s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
