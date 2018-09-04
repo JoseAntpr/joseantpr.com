@@ -1,13 +1,18 @@
 import * as React from 'react';
 import  { styled }  from '../../utils/theme/themeStyledComponents';
 
+interface Props {
+    href?: string;
+    icon?: string;
+}
+
 const linkUrl = 'https://www.linkedin.com/in/joseantpalacios/';
 const StyledIcon = styled.span`
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(26, 187, 156);
-    color: white;
+    background-color: ${p => p.theme.colors.green};
+    color: ${ p => p.theme.colors.white};
     height: 36px;
     width: 36px;
     margin: 10px;
@@ -15,10 +20,10 @@ const StyledIcon = styled.span`
     text-align: center;
 
     &:hover {
-        background-color: rgba(17, 160, 132);
+        background-color: ${ p => p.theme.colors.hoverColor(p.theme.colors.green)};
     }
 `
-const Icon = ( {href = linkUrl, icon = 'fab fa-linkedin-in'} ) => (
+const Icon: React.SFC<Props> = ( {href = linkUrl, icon = 'fab fa-linkedin-in'} ) => (
     <a href={href} target="_blank" style={{ textDecoration: 'none'}}>
         <StyledIcon> <i className={icon}/> </StyledIcon>
     </a>

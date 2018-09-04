@@ -4,6 +4,7 @@ import { styled } from '../../utils/theme/themeStyledComponents';
 import Avatar from '../Avatar';
 import Icon from '../Icon';
 
+
 const StyledHeader = styled.div`
     height: 100%;
     display: flex;
@@ -19,9 +20,9 @@ const BackgroundImage = styled.div`
     filter: blur(2px);
     background: linear-gradient(
         90deg,
-        rgba(28, 28, 28, 0.65),
+        ${ p => p.theme.colors.transparentize(0.35, p.theme.colors.black)},
         rgba(122, 118, 118, 0.65),
-        rgba(26, 187, 156, 0.65)
+        ${ p => p.theme.colors.transparentize(0.35, p.theme.colors.green)}
       ), url(${bgImg});
     background-position: center;
     background-repeat: no-repeat;
@@ -46,15 +47,15 @@ const InfoContainer = styled.div`
     padding: 15px;
     ${p => p.theme.media.desktop`
         margin-left: 10px;
-        border-left: 3px solid rgba(26, 187, 156, 0.65);
+        border-left: 3px solid ${p.theme.colors.green};
     `};
     ${p => p.theme.media.onlyMobile`
         width: 100%;
         text-align: center;
     `};
-    color: #f7f7f7;
+    color: ${p => p.theme.colors.whiteGray};
 `
-const Header = () => (
+const Header: React.SFC = () => (
     <StyledHeader>
         <BackgroundImage />
         <Wrapper>
