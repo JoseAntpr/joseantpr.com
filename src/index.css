@@ -8,3 +8,67 @@ html, body {
 #root {
   height: 100%;
 }
+
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+    border-right: 6px solid rgba(26, 187, 156, 0.65);
+  }
+  1% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 6px solid rgba(26, 187, 156, 0.65);
+  }
+  100% {
+    opacity: 1;
+    border-right: none;
+  }
+}
+
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes blink-caret {
+  50% { border-color: transparent }
+}
+
+.typing-text{
+  width: 100%;
+  border-color:  rgba(26, 187, 156, 0.65);
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: type 5s steps(40, end), blink-caret .5s step-end infinite alternate;
+}
+
+.typing-text2{
+  width: 52%;
+  border-right:  6px solid rgba(26, 187, 156, 0.65);
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-animation: type 5s steps(40, end);
+  -webkit-animation: type2 5s steps(40, end), blink-caret .5s step-end infinite alternate;
+  animation-delay: 5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
