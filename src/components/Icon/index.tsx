@@ -15,7 +15,7 @@ const StyledIcon = styled.span`
     text-align: center;
 `
 const Icon = ( {href = linkUrl, icon = 'fab fa-linkedin-in'} ) => (
-    <a href={href} target="_blank">
+    <a href={href} target="_blank" style={{ textDecoration: 'none'}}>
         <StyledIcon> <i className={icon}/> </StyledIcon>
     </a>
 )
