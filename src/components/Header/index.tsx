@@ -69,6 +69,7 @@ const Header = () => (
                     joseantpalaciosramirez@gmail.com
                 </div>
                 <Icon href="https://twitter.com/JoseAntPR" icon="fab fa-twitter"/>
+                <Icon href="https://github.com/JoseAntpr" icon="fab fa-github"/>
                 <Icon />
             </InfoContainer>
         </Wrapper>
