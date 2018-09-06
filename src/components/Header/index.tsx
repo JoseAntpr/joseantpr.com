@@ -8,6 +8,7 @@ import Icon from '../Icon';
 const StyledHeader = styled.div`
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 `
 
@@ -61,9 +62,9 @@ const Header: React.SFC = () => (
         <Wrapper>
             <Avatar />
             <InfoContainer>
-                <h2>José Antonio Palacios Ramírez</h2>
-                <h3>Full Stack Developer</h3>
-                <div>
+                <h2 style={{fontSize: '1.8rem'}}>José Antonio Palacios Ramírez</h2>
+                <h3 style={{fontSize: '1.2rem', wordBreak: 'break-word'}}>Full Stack Developer</h3>
+                <div style={{fontSize: '1rem', wordBreak: 'break-word'}}>
                     <span style={{marginRight: '5px'}}>
                         <i className='fas fa-envelope' />
                     </span>
