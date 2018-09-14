@@ -18,7 +18,7 @@ const BackgroundImage = styled.div`
     height: 100%;
     width: 100%;
     opacity: 0.9;
-    filter: blur(2px);
+    filter: blur(4px);
     background: linear-gradient(
         90deg,
         ${ p => p.theme.colors.transparentize(0.35, p.theme.colors.black)},
